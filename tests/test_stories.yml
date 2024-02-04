@@ -1,91 +1,53 @@
-#### This file contains tests to evaluate that your bot behaves as expected.
-#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+version: "3.1"
 
 stories:
-- story: happy path 1
-  steps:
-  - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
 
-- story: happy path 2
+- story: Test Greeting
   steps:
   - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
+      Hi
+  - action: greet
 
-- story: sad path 1
+- story: Test Explore Preferences
   steps:
   - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      yes
-    intent: affirm
-  - action: utter_happy
+      Hi there! I'm not sure what I like in books.
+  - action: explore_preferences
 
-- story: sad path 2
+- story: Test Specific Topics Interest
   steps:
   - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      not really
-    intent: deny
-  - action: utter_goodbye
+      Hi! I have clear preferences. I love stories about space and technology.
+  - action: specific_topics_interest
 
-- story: sad path 3
+- story: Test Character Preferences
   steps:
   - user: |
-      hi
-    intent: greet
-  - action: utter_greet
-  - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      no
-    intent: deny
-  - action: utter_goodbye
+      Hi! I'm not sure what kind of characters I like.
+  - action: character_preference
 
-- story: say goodbye
+- story: Test Inquire Relatable Characters
   steps:
   - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
+      Hello! Can you recommend books with relatable characters?
+  - action: inquire_relatable_characters
 
-- story: bot challenge
+- story: Test Sports and Outdoors Interest
   steps:
   - user: |
-      are you a bot?
-    intent: bot_challenge
-  - action: utter_iamabot
+      Hi! I'm interested in books with sports or outdoor activities.
+  - action: sports_and_outdoors_interest
+
+- story: Test No Interest in Sports and Outdoors
+  steps:
+  - user: |
+      Hi! I'm not into sports or outdoor-themed stories.
+  - action: no_interest_sports_outdoors
+
+# Add more test stories for other intents as needed
+
+- story: Test End Conversation
+  steps:
+  - user: |
+      Bye
+  - action: end_conversation

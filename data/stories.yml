@@ -1,30 +1,81 @@
 version: "3.1"
 
 stories:
-
-- story: happy path
+  - story: Conversation with Reader
+    steps:
+      - action: utter_initial_greeting
+      - intent: greet
+      - intent: uncertain_preferences
+      - action: explore_preferences
+      - intent: uncertain_preferences
+      - action: real_world_vs_fantastical
+      - intent: uncertain_characters
+      - action: character_preference
+      - intent: no_preference_characters
+      - action: relatable_characters_explanation
+      - intent: specific_topics_interest
+      - action: sports_and_outdoors_interest
+      - intent: preference_action_emotion
+      - action: action_vs_emotion_preference
+      - intent: uncertain_book_length
+      - action: book_length_preference
+      - intent: no_inquire_recommendations
+      - action: utter_no_inquire_recommendations
+      - intent: share_entertainment_preferences
+      - action: entertainment_preferences
+      - intent: accept_recommendation
+      - action: accept_recommendation
+      - intent: goodbye
+      - action: utter_continue_conversation
+  - story: Reader with Clear Preferences
+    steps:
+      - action: utter_initial_greeting
+      - intent: greet
+      - intent: certain_preferences
+      - action: explore_preferences
+      - intent: certain_preferences
+      - action: real_world_vs_fantastical
+      - intent: certain_characters
+      - action: character_preference
+      - intent: preference_relatable_characters
+      - action: relatable_characters_explanation
+      - intent: specific_topics_interest
+      - action: sports_and_outdoors_interest
+      - intent: preference_action_emotion
+      - action: action_vs_emotion_preference
+      - intent: certain_book_length
+      - action: book_length_preference
+      - intent: inquire_recommendations
+      - action: utter_inquire_recommendations
+      - intent: share_entertainment_preferences
+      - action: entertainment_preferences
+      - intent: accept_recommendation
+      - action: accept_recommendation
+      - intent: goodbye
+      - action: utter_continue_conversation
+  - story: Reader Rejects Recommendation
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+    - action: utter_initial_greeting
+    - intent: greet
+    - intent: uncertain_preferences
+    - action: explore_preferences
+    - intent: uncertain_preferences
+    - action: real_world_vs_fantastical
+    - intent: uncertain_characters
+    - action: character_preference
+    - intent: preference_relatable_characters
+    - action: relatable_characters_explanation
+    - intent: specific_topics_interest
+    - action: sports_and_outdoors_interest
+    - intent: preference_action_emotion
+    - action: action_vs_emotion_preference
+    - intent: certain_book_length
+    - action: book_length_preference
+    - intent: inquire_recommendations
+    - action: utter_inquire_recommendations
+    - intent: share_entertainment_preferences
+    - action: entertainment_preferences
+    - intent: reject_recommendation
+    - action: deny_recommendation
+    - intent: goodbye
+    - action: utter_continue_conversation

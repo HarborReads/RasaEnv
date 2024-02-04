@@ -1,33 +1,167 @@
 version: "3.1"
-
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - interest_books
+  - no_interest_books
+  - uncertain_preferences
+  - certain_preferences
+  - preference_settings
+  - no_preference_settings
+  - uncertain_characters
+  - certain_characters
+  - preference_relatable_characters
+  - no_preference_relatable_characters
+  - inquire_relatable_characters
+  - no_inquire_relatable_characters
+  - interest_sports_outdoors
+  - no_interest_sports_outdoors
+  - preference_action_emotion
+  - no_preference_action_emotion
+  - uncertain_book_length
+  - certain_book_length
+  - inquire_recommendations
+  - no_inquire_recommendations
+  - share_entertainment_preferences
+  - no_share_entertainment_preferences
+  - accept_recommendation
+  - reject_recommendation
+  - goodbye
+  - continue_conversation
+
+entities:
+  - setting
+  - character_type
+  - theme
+  - personal_interest
+  - book_length
+  - entertainment_preference
+  - recommendation_response
+
+slots:
+  setting:
+    type: text
+    mappings:
+      - type: from_text
+  character_type:
+    type: text
+    mappings:
+      - type: from_text
+  theme:
+    type: text
+    mappings:
+      - type: from_text
+  personal_interest:
+    type: text
+    mappings:
+      - type: from_text
+  book_length:
+    type: text
+    mappings:
+      - type: from_text
+  entertainment_preference:
+    type: text
+    mappings:
+      - type: from_text
+  recommendation_response:
+    type: text
+    mappings:
+      - type: from_text
+
+actions:
+  - action_start_conversation
+  - action_ask_for_more_information
+  - action_deny_book_recommendations
+  - greet
+  - explore_preferences
+  - real_world_vs_fantastical
+  - character_preference
+  - relatable_characters_explanation
+  - specific_topics_interest
+  - sports_and_outdoors_interest
+  - action_vs_emotion_preference
+  - book_length_preference
+  - entertainment_preferences
+  - adventure_movies_and_sports_games
+  - accept_recommendation
+  - deny_recommendation
+  - ask_for_more_info
+  - thank_you
+  - explore_more_options
+  - end_conversation
+  - utter_initial_greeting
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_certain_preferences:
+    - text: "Awesome! It's always great to have clear preferences. Let's dive into your specific likes. Do you lean more towards fiction or non-fiction?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_preference_settings:
+    - text: "Interesting choice! Real-world settings can provide a grounded feel, while fantastical settings offer a sense of wonder. Do you have a preference for one over the other?"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter_no_preference_settings:
+    - text: "Got it! Both settings have their charms. Now, how about characters? Do you like reading about strong, heroic figures, or do you find yourself drawn to more relatable, everyday characters?"
 
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_uncertain_characters:
+    - text: "No worries! Let me help you figure that out. Do you have any specific traits in characters that you find interesting, like bravery, humor, or complexity?"
 
-  utter_goodbye:
-  - text: "Bye"
+  utter_certain_characters:
+    - text: "Nice choice! Specific character traits can really enhance the reading experience. Now, let's talk about relatability. Do you prefer stories with characters you can relate to, or do you enjoy more fantastical and unique characters?"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_preference_relatable_characters:
+    - text: "Great point! Relatable characters often face challenges or experiences that we can understand or empathize with. Now, any specific topics or themes you find interesting in your own life that you'd like to see in a story?"
+
+  utter_no_preference_relatable_characters:
+    - text: "Got it! Unique characters can bring a fresh perspective to a story. Now, let's explore themes. Is there any particular theme or topic that you find intriguing, like adventure, romance, or mystery?"
+
+  utter_inquire_relatable_characters:
+    - text: "Absolutely! Relatable characters often add depth to a story. For example, they might deal with friendship, family, or personal growth. Do you have any specific experiences or challenges you'd like to see explored in a story?"
+
+  utter_no_inquire_relatable_characters:
+    - text: "No problem! If you ever have specific questions or if there's anything you'd like to know more about, feel free to ask. Let's continue exploring your preferences!"
+
+  utter_interest_sports_outdoors:
+    - text: "That's a good starting point! Sports and outdoor activities can make for exciting and dynamic settings. Do you have a preference for a particular sport or outdoor activity in books?"
+
+  utter_no_interest_sports_outdoors:
+    - text: "No worries! Not everyone is into sports or outdoor activities. Let's explore other elements. Do you enjoy stories with a focus on relationships, mystery, or something else?"
+
+  utter_preference_action_emotion:
+    - text: "Excellent! Balancing action and emotional moments can create a rich reading experience. Now, when it comes to length, do you prefer shorter, quick reads, or do you enjoy getting lost in longer, more immersive novels?"
+
+  utter_no_preference_action_emotion:
+    - text: "Got it! Some readers enjoy a good balance of action and emotion, while others have specific preferences. Now, let's talk about book length. Do you have a preference for shorter or longer books?"
+
+  utter_uncertain_book_length:
+    - text: "No problem! Book length can vary, and it's all about personal preference. If you're just starting, you might want to try a variety of lengths to see what captures your interest. How about your favorite movies, TV shows, or games? Any preferences there?"
+
+  utter_certain_book_length:
+    - text: "Understood! It's great to have a preference for book length. Now, based on your preferences, you might enjoy exploring books with similar lengths and styles. Any specific genres you're curious about?"
+
+  utter_inquire_recommendations:
+    - text: "Sure thing! To give you the best recommendations, could you share any specific genres or themes you're interested in exploring? This will help me tailor my suggestions to your taste."
+
+  utter_no_inquire_recommendations:
+    - text: "No worries! If you ever change your mind or have specific genres or themes in mind, feel free to ask for recommendations. I'm here to help whenever you're ready!"
+
+  utter_share_entertainment_preferences:
+    - text: "That's helpful information! Adventure movies often have exciting plots, and sports video games reflect your interest in sports. Based on this, you might enjoy books with adventurous plots and maybe some sports-related elements. How does that sound?"
+
+  utter_no_share_entertainment_preferences:
+    - text: "No problem! If you ever want to share your preferences or if there's anything else you'd like to explore, feel free to let me know. We can continue discussing your interests!"
+
+  utter_accept_recommendation:
+    - text: "Great! Feel free to explore different genres and themes. If you ever want book recommendations or have more questions, just let me know. Happy reading!"
+
+  utter_reject_recommendation:
+    - text: "Certainly! If you have specific genres or themes in mind that you'd like to explore, or if there's anything else you'd like to discuss, feel free to let me know. I'm here to help!"
+
+  utter_continue_conversation:
+    - text: "Sure, let's keep the conversation going! If there's anything specific you'd like to talk about or explore, feel free to share. I'm here to assist you."
+
+  utter_initial_greeting:
+    - text: "Hello there! I hope you're doing well. I'm here to chat with you about books. Do you have any preferences when it comes to reading?"
+
+
 
 session_config:
   session_expiration_time: 60

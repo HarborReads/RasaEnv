@@ -1,91 +1,243 @@
+# data/nlu.yml
 version: "3.1"
-
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Hello
+    - Hi
+    - Hey
+    - Hi there
+    - Greetings
+    - Good day
+    - Hey, what's up?
+    - Hi, how are you doing?
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - Goodbye
+    - Farewell
+    - See you later
+    - Bye for now
+    - Catch you later
+    - Take care
 
-- intent: affirm
+- intent: interest_books
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - I love reading books
+    - Tell me about interesting books
+    - What's your favorite book?
+    - Recommend a good book
+    - Any book suggestions?
+    - Books are fascinating
 
-- intent: deny
+- intent: no_interest_books
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - I'm not into books
+    - Books are not my thing
+    - Reading is not for me
+    - I don't like books
+    - I prefer other forms of entertainment
 
-- intent: mood_great
+- intent: no_interest_books
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - I'm not into books
+    - Books are not my thing
+    - Reading is not for me
+    - I don't like books
+    - I prefer other forms of entertainment
 
-- intent: mood_unhappy
+- intent: uncertain_preferences
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - I'm not sure what I like
+    - It's hard to decide my preferences
+    - Uncertain about my likes and dislikes
+    - Can't make up my mind
 
-- intent: bot_challenge
+- intent: certain_preferences
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - I have clear preferences
+    - I know what I like
+    - I'm certain about my preferences
+    - My preferences are well-defined
+    - I have specific likes and dislikes
+
+- intent: preference_settings
+  examples: |
+    - I like stories with real-world settings
+    - Settings are important to me in a story
+    - Realistic settings appeal to me
+    - I enjoy fantastical settings in books
+
+- intent: no_preference_settings
+  examples: |
+    - I don't have a preference for settings
+    - Both settings are fine for me
+    - Real-world or fantastical, it doesn't matter
+    - Settings don't influence my choice
+
+
+- intent: uncertain_characters
+  examples: |
+    - I'm not sure what kind of characters I like.
+    - Uncertain about character preferences.
+    - It's hard to say which characters I prefer.
+
+- intent: certain_characters
+  examples: |
+    - I love stories with strong and heroic characters.
+    - Certain that I enjoy characters with complexity.
+    - I'm sure I like brave and relatable characters.
+
+- intent: preference_relatable_characters
+  examples: |
+    - I prefer stories with characters I can relate to.
+    - Relatable characters make a story more enjoyable for me.
+    - I like characters who face challenges similar to real life.
+
+- intent: no_preference_relatable_characters
+  examples: |
+    - I don't have a specific preference for relatable characters.
+    - Not particular about characters being relatable.
+    - No strong preference for relatability in characters.
+
+- intent: inquire_relatable_characters
+  examples: |
+    - Can you recommend books with relatable characters?
+    - I'm interested in stories with characters facing relatable challenges.
+    - Any suggestions for books with relatable characters?
+
+- intent: no_inquire_relatable_characters
+  examples: |
+    - I'm not looking for books with specific character recommendations.
+    - No need for suggestions based on character relatability.
+    - I'll explore characters on my own; no recommendations needed.
+
+- intent: interest_sports_outdoors
+  examples: |
+    - I'm interested in books with sports or outdoor activities.
+    - Any good novels involving outdoor adventures?
+    - Sports in books really catch my attention.
+
+- intent: no_interest_sports_outdoors
+  examples: |
+    - I'm not into sports or outdoor-themed stories.
+    - No preference for books related to outdoor activities.
+    - Sports and outdoors don't appeal to me in books.
+
+
+
+- intent: preference_action_emotion
+  examples: |
+    - I enjoy books with a good balance of action and emotion.
+    - Stories with both action and emotional moments are my preference.
+    - I like books that provide a mix of action and heartfelt scenes.
+
+- intent: no_preference_action_emotion
+  examples: |
+    - I don't have a specific preference for the balance of action and emotion.
+    - Not particular about the mix of action and emotion in books.
+    - No strong preference for or against action or emotional content.
+
+- intent: uncertain_book_length
+  examples: |
+    - I'm not sure if I prefer shorter or longer books.
+    - Uncertain about the ideal length of books for me.
+    - It's hard to say if I have a preference for book length.
+
+- intent: certain_book_length
+  examples: |
+    - I enjoy both shorter quick reads and longer, immersive novels.
+    - I'm certain that I prefer longer books with in-depth storytelling.
+    - Short or long, as long as the story is captivating, I'm in.
+
+- intent: inquire_recommendations
+  examples: |
+    - Can you recommend any good books for me to read?
+    - Looking for book recommendations based on my preferences.
+    - Any suggestions for books similar to my interests?
+
+- intent: no_inquire_recommendations
+  examples: |
+    - I'm not actively seeking book recommendations right now.
+    - No need for book suggestions at the moment.
+    - I'll explore books on my own; no recommendations needed.
+
+- intent: share_entertainment_preferences
+  examples: |
+    - I enjoy adventure movies and sports video games.
+    - My entertainment preferences include action-packed movies and sports games.
+    - Here are some of my favorite genres in movies and games.
+
+- intent: no_share_entertainment_preferences
+  examples: |
+    - I prefer not to share specific details about my entertainment preferences.
+    - Not comfortable disclosing my favorite genres at the moment.
+    - Let's keep the focus on books; I won't share my entertainment preferences.
+
+- intent: accept_recommendation
+  examples: |
+    - That sounds like a great recommendation! I'll check it out.
+    - I accept the recommendation; it aligns with my preferences.
+    - Yes, I'd love to explore the suggested book. Thank you!
+
+- intent: reject_recommendation
+  examples: |
+    - The recommendation doesn't quite match my interests.
+    - I appreciate the suggestion, but I'm not interested in that book.
+    - I'll pass on this recommendation; it's not what I'm looking for.
+
+- intent: continue_conversation
+  examples: |
+    - Let's keep talking
+    - I have more to discuss
+    - What else can we talk about?
+    - Continue the conversation
+    - I'm not done chatting yet
+    - Any other topics to explore?
+
+
+
+
+
+# Additional Intents:
+- intent: ask_for_more_info
+  examples: |
+    - Can you tell me more about the types of books you have?
+    - I'd like more information about the genres available.
+    - What other preferences should I consider?
+    - Can you provide details about the characters in the recommended books?
+
+- intent: thank_you
+  examples: |
+    - Thanks for your help!
+    - Thank you for the recommendations.
+    - I appreciate your assistance.
+    - Thanks a lot!
+    - Grateful for your suggestions.
+
+- intent: explore_more_options
+  examples: |
+    - What other genres do you have?
+    - Can you suggest more books in different categories?
+    - I want to explore a broader range of options.
+    - Any other recommendations for someone new to reading?
+
+- intent: end_conversation
+  examples: |
+    - I think I'm good for now.
+    - That's all for today.
+    - I'll come back if I need more suggestions.
+    - I need to go, but thanks for your help.
+
+responses:
+  utter_ask_for_more_info:
+    - text: "Certainly! We have a diverse collection of genres including mystery, romance, science fiction, and more. Is there a specific genre you're interested in?"
+
+  utter_thank_you:
+    - text: "You're welcome! If you have any more questions or need further recommendations, feel free to ask."
+
+  utter_explore_more_options:
+    - text: "Absolutely! If you're open to exploring, we have a variety of genres to choose from. How about we delve into some other categories?"
+
+  utter_end_conversation:
+    - text: "No problem! If you ever want to chat about books or need recommendations, I'm here. Happy reading!"

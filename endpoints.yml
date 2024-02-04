@@ -1,17 +1,9 @@
-# This file contains the different endpoints your bot can use.
-
-# Server where the models are pulled from.
-# https://rasa.com/docs/rasa/model-storage#fetching-models-from-a-server
-
-#models:
-#  url: http://my-server.com/models/default_core@latest
-#  wait_time_between_pulls:  10   # [optional](default: 100)
-
+# This file contains the different endpoints your bot can use.rasa
 # Server which runs your custom actions.
 # https://rasa.com/docs/rasa/custom-actions
 
-#action_endpoint:
-#  url: "http://localhost:5055/webhook"
+action_endpoint:
+  url: "http://localhost:5055/webhook"
 
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
@@ -32,8 +24,7 @@
 #    username: <username used for authentication>
 #    password: <password used for authentication>
 
-# Event broker which all conversation events should be streamed to.
-# https://rasa.com/docs/rasa/event-brokers
+
 
 #event_broker:
 #  url: localhost
