@@ -12,6 +12,17 @@ nlu:
     - Hey, what's up?
     - Hi, how are you doing?
 
+
+- intent: certain_preferences
+  examples: |
+    - I have clear preferences
+    - I know what I like
+    - I'm certain about my preferences
+    - My preferences are well-defined
+    - I have specific likes and dislikes
+    - I'm sure of my reading preferences
+    - My favorite genres are well-defined
+  
 - intent: goodbye
   examples: |
     - Goodbye
@@ -20,6 +31,9 @@ nlu:
     - Bye for now
     - Catch you later
     - Take care
+    - That's all for today.
+    - I'll come back if I need more suggestions.
+    - I need to go, but thanks for your help.
 
 - intent: interest_books
   examples: |
@@ -38,28 +52,12 @@ nlu:
     - I don't like books
     - I prefer other forms of entertainment
 
-- intent: no_interest_books
-  examples: |
-    - I'm not into books
-    - Books are not my thing
-    - Reading is not for me
-    - I don't like books
-    - I prefer other forms of entertainment
-
 - intent: uncertain_preferences
   examples: |
     - I'm not sure what I like
     - It's hard to decide my preferences
     - Uncertain about my likes and dislikes
     - Can't make up my mind
-
-- intent: certain_preferences
-  examples: |
-    - I have clear preferences
-    - I know what I like
-    - I'm certain about my preferences
-    - My preferences are well-defined
-    - I have specific likes and dislikes
 
 - intent: preference_settings
   examples: |
@@ -194,50 +192,3 @@ nlu:
     - Continue the conversation
     - I'm not done chatting yet
     - Any other topics to explore?
-
-
-
-
-
-# Additional Intents:
-- intent: ask_for_more_info
-  examples: |
-    - Can you tell me more about the types of books you have?
-    - I'd like more information about the genres available.
-    - What other preferences should I consider?
-    - Can you provide details about the characters in the recommended books?
-
-- intent: thank_you
-  examples: |
-    - Thanks for your help!
-    - Thank you for the recommendations.
-    - I appreciate your assistance.
-    - Thanks a lot!
-    - Grateful for your suggestions.
-
-- intent: explore_more_options
-  examples: |
-    - What other genres do you have?
-    - Can you suggest more books in different categories?
-    - I want to explore a broader range of options.
-    - Any other recommendations for someone new to reading?
-
-- intent: end_conversation
-  examples: |
-    - I think I'm good for now.
-    - That's all for today.
-    - I'll come back if I need more suggestions.
-    - I need to go, but thanks for your help.
-
-responses:
-  utter_ask_for_more_info:
-    - text: "Certainly! We have a diverse collection of genres including mystery, romance, science fiction, and more. Is there a specific genre you're interested in?"
-
-  utter_thank_you:
-    - text: "You're welcome! If you have any more questions or need further recommendations, feel free to ask."
-
-  utter_explore_more_options:
-    - text: "Absolutely! If you're open to exploring, we have a variety of genres to choose from. How about we delve into some other categories?"
-
-  utter_end_conversation:
-    - text: "No problem! If you ever want to chat about books or need recommendations, I'm here. Happy reading!"

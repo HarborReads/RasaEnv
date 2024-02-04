@@ -70,10 +70,7 @@ slots:
 
 actions:
   - action_start_conversation
-  - action_ask_for_more_information
-  - action_deny_book_recommendations
-  - greet
-  - explore_preferences
+  - action_explore_reading_preferences
   - real_world_vs_fantastical
   - character_preference
   - relatable_characters_explanation
@@ -81,17 +78,15 @@ actions:
   - sports_and_outdoors_interest
   - action_vs_emotion_preference
   - book_length_preference
-  - entertainment_preferences
-  - adventure_movies_and_sports_games
-  - accept_recommendation
-  - deny_recommendation
   - ask_for_more_info
-  - thank_you
-  - explore_more_options
-  - end_conversation
-  - utter_initial_greeting
+  - accept_recommendation
+  - action_ask_for_more_information
+  - reject_recommendation
+  - action_end_the_conversation
 
 responses:
+  utter_initial_greeting:
+    - text: "Hello there! I hope you're doing well. I'm here to chat with you about books. Do you have any preferences when it comes to reading?"
   utter_certain_preferences:
     - text: "Awesome! It's always great to have clear preferences. Let's dive into your specific likes. Do you lean more towards fiction or non-fiction?"
 
@@ -158,8 +153,8 @@ responses:
   utter_continue_conversation:
     - text: "Sure, let's keep the conversation going! If there's anything specific you'd like to talk about or explore, feel free to share. I'm here to assist you."
 
-  utter_initial_greeting:
-    - text: "Hello there! I hope you're doing well. I'm here to chat with you about books. Do you have any preferences when it comes to reading?"
+    
+
 
 
 

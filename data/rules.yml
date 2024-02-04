@@ -1,139 +1,32 @@
 version: "3.1"
-
 rules:
-  - rule: Start conversation with initial greeting
-    steps:
-      - action: utter_initial_greeting
-      - intent: greet 
-
-  - rule: Handle Goodbyes
-    steps:
-      - intent: goodbye
-      - action: utter_end_conversation
-
-  - rule: Handle Book Interest
-    steps:
-      - intent: interest_books
-      - action: action_explore_preferences
-
-  - rule: Handle No Interest in Books
-    steps:
-      - intent: no_interest_books
-      - action: action_ask_for_more_info
-
-  - rule: Handle Uncertain Preferences
-    steps:
-      - intent: uncertain_preferences
-      - action: action_explore_preferences
-
-  - rule: Handle Certain Preferences
-    steps:
-      - intent: certain_preferences
-      - action: action_explore_preferences
-
-  - rule: Handle Preference Settings
-    steps:
-      - intent: preference_settings
-      - action: utter_preference_settings
-
-  - rule: Handle No Preference Settings
-    steps:
-      - intent: no_preference_settings
-      - action: utter_no_preference_settings
-
-  - rule: Handle Uncertain Characters
-    steps:
-      - intent: uncertain_characters
-      - action: utter_uncertain_characters
-
-  - rule: Handle Certain Characters
-    steps:
-      - intent: certain_characters
-      - action: utter_certain_characters
-
-  - rule: Handle Preference for Relatable Characters
-    steps:
-      - intent: preference_relatable_characters
-      - action: relatable_characters_explanation
-
-  - rule: Handle No Preference for Relatable Characters
-    steps:
-      - intent: no_preference_relatable_characters
-      - action: action_explore_more_options
-
-  - rule: Handle Inquire Relatable Characters
-    steps:
-      - intent: inquire_relatable_characters
-      - action: inquire_relatable_characters
-
-  - rule: Handle No Inquire Relatable Characters
-    steps:
-      - intent: no_inquire_relatable_characters
-      - action: action_explore_more_options
-
-  - rule: Handle Interest in Sports/Outdoors
-    steps:
-      - intent: interest_sports_outdoors
-      - action: action_sports_and_outdoors_interest
-
-  - rule: Handle No Interest in Sports/Outdoors
-    steps:
-      - intent: no_interest_sports_outdoors
-      - action: action_explore_more_options
-
-  - rule: Handle Preference for Action and Emotion
-    steps:
-      - intent: preference_action_emotion
-      - action: action_vs_emotion_preference
-
-  - rule: Handle No Preference for Action and Emotion
-    steps:
-      - intent: no_preference_action_emotion
-      - action: action_vs_emotion_preference
-
-  - rule: Handle Uncertain Book Length
-    steps:
-      - intent: uncertain_book_length
-      - action: action_explore_more_options
-
-  - rule: Handle Certain Book Length
-    steps:
-      - intent: certain_book_length
-      - action: action_book_length_preference
-
-  - rule: Handle Inquire Recommendations
-    steps:
-      - intent: inquire_recommendations
-      - action: inquire_recommendations
-
-  - rule: Handle No Inquire Recommendations
-    steps:
-      - intent: no_inquire_recommendations
-      - action: action_explore_more_options
-
-  - rule: Handle Share Entertainment Preferences
-    steps:
-      - intent: share_entertainment_preferences
-      - action: action_entertainment_preferences
-
-  - rule: Handle No Share Entertainment Preferences
-    steps:
-      - intent: no_share_entertainment_preferences
-      - action: action_explore_more_options
-
-  - rule: Handle Accept Recommendation
-    steps:
-      - intent: accept_recommendation
-      - action: action_accept_recommendation
-
-  - rule: Handle Reject Recommendation
+  - rule: handle_reject_recommendation
     steps:
       - intent: reject_recommendation
-      - action: action_deny_recommendation
+      - action: action_deny_book_recommendations
 
-  - rule: Continue Conversation
-    condition:
-      - active_loop: action_listen
+  - rule: handle_accept_recommendation
     steps:
-      - intent: continue_conversation
+      - intent: accept_recommendation
+      - action: accept_recommendation
+      
+  - rule: handle_greet
+    steps:
+      - intent: greet
       - action: action_start_conversation
+# Add this rule to handle the start_conversation_and_explore_preferences story
+  - rule: handle_start_conversation_and_explore_preferences
+    steps:
+      - intent: greet
+      - action: action_start_conversation
+      - action: action_explore_reading_preferences
+  # Example: Handle an inquiry about more information
+  - rule: handle_ask_for_more_info
+    steps:
+      - intent: ask_for_more_info
+      - action: action_ask_for_more_info
+
+  - rule: handle_goodbye
+    steps:
+      - intent: goodbye
+      - action: action_goodbye
