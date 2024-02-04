@@ -3,8 +3,8 @@ version: "3.1"
 stories:
   - story: Conversation with Reader
     steps:
-      - action: utter_initial_greeting
       - intent: greet
+      - action: utter_initial_greeting
       - intent: uncertain_preferences
       - action: explore_preferences
       - intent: uncertain_preferences
@@ -29,8 +29,8 @@ stories:
       - action: utter_continue_conversation
   - story: Reader with Clear Preferences
     steps:
+       - intent: greet
       - action: utter_initial_greeting
-      - intent: greet
       - intent: certain_preferences
       - action: explore_preferences
       - intent: certain_preferences
