@@ -3,6 +3,7 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
+    
     - Hello
     - Hi
     - Hey
@@ -22,7 +23,13 @@ nlu:
     - I have specific likes and dislikes
     - I'm sure of my reading preferences
     - My favorite genres are well-defined
-  
+
+- intent: end_conversation
+  examples: |
+    - That's all for today.
+    - I'll come back if I need more suggestions.
+    - I need to go, but thanks for your help.
+
 - intent: goodbye
   examples: |
     - Goodbye
@@ -31,9 +38,6 @@ nlu:
     - Bye for now
     - Catch you later
     - Take care
-    - That's all for today.
-    - I'll come back if I need more suggestions.
-    - I need to go, but thanks for your help.
 
 - intent: interest_books
   examples: |
@@ -59,12 +63,17 @@ nlu:
     - Uncertain about my likes and dislikes
     - Can't make up my mind
 
+
+
 - intent: preference_settings
   examples: |
+    - yes
     - I like stories with real-world settings
     - Settings are important to me in a story
     - Realistic settings appeal to me
     - I enjoy fantastical settings in books
+    - fiction
+    - non-fiction
 
 - intent: no_preference_settings
   examples: |
@@ -192,3 +201,28 @@ nlu:
     - Continue the conversation
     - I'm not done chatting yet
     - Any other topics to explore?
+# Additional Intents:
+- intent: ask_for_more_info
+  examples: |
+    - Can you tell me more about the types of books you have?
+    - I'd like more information about the genres available.
+    - What other preferences should I consider?
+    - Can you provide details about the characters in the recommended books?
+
+- intent: thank_you
+  examples: |
+    - Thanks for your help!
+    - Thank you for the recommendations.
+    - I appreciate your assistance.
+    - Thanks a lot!
+    - Grateful for your suggestions.
+
+- intent: explore_more_options
+  examples: |
+    - What other genres do you have?
+    - Can you suggest more books in different categories?
+    - I want to explore a broader range of options.
+    - Any other recommendations for someone new to reading?
+
+
+

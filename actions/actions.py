@@ -28,11 +28,11 @@ class ActionRealWorldVsFantastical(Action):
     def name(self) -> Text:
         return "real_world_vs_fantastical"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(template="utter_preference_settings")
-        # Implement logic for exploring preferences regarding real-world vs. fantastical settings
+     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        response = "Awesome! It's always great to have clear preferences. Let's dive into your specific likes. Do you lean more towards fiction or non-fiction?"
+
+        # Send the response back to the user
+        dispatcher.utter_message(response)
         return []
 
 class ActionCharacterPreference(Action):
