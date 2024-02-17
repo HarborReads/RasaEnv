@@ -12,6 +12,13 @@ nlu:
     - Good day
     - Hey, what's up?
     - Hi, how are you doing?
+    - Yo!
+    - Hiya!
+    - Well hello there!
+    - Hey, how's it going?
+    - Hi, what's new?
+    - Good morning!
+
 
 
 - intent: certain_preferences
@@ -23,12 +30,27 @@ nlu:
     - I have specific likes and dislikes
     - I'm sure of my reading preferences
     - My favorite genres are well-defined
+    - I'm confident in what I enjoy
+    - I've never been indecisive about my tastes
+    - I've got a firm grasp on what I like
+    - I'm pretty clear about what I'm into
+    - I'm very particular about my preferences
+    - My tastes are well-established
+    - I know exactly what I'm looking for
 
 - intent: end_conversation
   examples: |
     - That's all for today.
     - I'll come back if I need more suggestions.
     - I need to go, but thanks for your help.
+    - I've got to run, but I appreciate your assistance.
+    - I'm signing off now, but I'll be back.
+    - I'm logging off, but I'll be back soon.
+    - Time's up for me, but I'll return later.
+    - Gotta go, but thanks for the conversation.
+    - I'll be back later, thanks again!
+    - That's all from me, thanks!
+    - I'm out for now, but I'll return.
 
 - intent: goodbye
   examples: |
@@ -38,6 +60,13 @@ nlu:
     - Bye for now
     - Catch you later
     - Take care
+    - Peace out
+    - Later gator
+    - So long
+    - Toodles
+    - Bye-bye
+    - Have a great day
+    - Stay safe
 
 - intent: interest_books
   examples: |
@@ -47,6 +76,12 @@ nlu:
     - Recommend a good book
     - Any book suggestions?
     - Books are fascinating
+    - Books are my escape
+    - Nothing beats a good book
+    - Can't get enough of books
+    - My happy place is curled up with a book
+    - I'm addicted to reading
+    - Books open up new worlds
 
 - intent: no_interest_books
   examples: |
@@ -55,6 +90,16 @@ nlu:
     - Reading is not for me
     - I don't like books
     - I prefer other forms of entertainment
+    - Books don't interest me much
+    - I'd rather watch movies than read
+    - Reading feels like a chore to me
+    - I'm not much of a reader
+    - Books put me to sleep
+    - I find reading boring
+    - I don't have the patience for books
+    - I've never been into reading
+    - Books don't excite me
+    - I'd rather do anything other than read
 
 - intent: uncertain_preferences
   examples: |
@@ -62,6 +107,17 @@ nlu:
     - It's hard to decide my preferences
     - Uncertain about my likes and dislikes
     - Can't make up my mind
+    - My preferences keep changing
+    - I'm still figuring out what I enjoy
+    - I haven't settled on my preferences yet
+    - Deciding my preferences is challenging
+    - My tastes are constantly evolving
+    - I'm exploring different options to find my preferences
+    - My preferences vary depending on my mood
+    - I'm indecisive about what I like
+    - It's difficult for me to determine my preferences
+    - I'm still experimenting with different genres
+    - My preferences are a bit unclear
 
 
 
@@ -74,6 +130,14 @@ nlu:
     - I enjoy fantastical settings in books
     - fiction
     - non-fiction
+    - Historical settings are fascinating to me
+    - Futuristic settings intrigue me
+    - I prefer stories set in urban environments
+    - I'm drawn to stories set in rural areas
+    - I enjoy reading about exotic settings
+    - I'm interested in stories set in outer space
+    - I like stories with supernatural settings
+    - I'm open to any setting as long as the story is good
 
 - intent: no_preference_settings
   examples: |
@@ -81,117 +145,297 @@ nlu:
     - Both settings are fine for me
     - Real-world or fantastical, it doesn't matter
     - Settings don't influence my choice
-
+    - I'm flexible when it comes to settings
+    - I'm not picky about settings
+    - I'm open to any setting
+    - The setting is not a deciding factor for me
+    - I'm more focused on the story than the setting
+    - Setting is not a priority for me
+    - I don't pay much attention to settings
+    - I'm indifferent to the setting
+    - Setting doesn't matter much to me
+    - I don't have strong feelings about settings
+    - Setting is not a big deal for me
 
 - intent: uncertain_characters
   examples: |
-    - I'm not sure what kind of characters I like.
-    - Uncertain about character preferences.
-    - It's hard to say which characters I prefer.
+    - I'm not sure what kind of characters I like
+    - Uncertain about character preferences
+    - It's hard to say which characters I prefer
+    - I'm still exploring different character types
+    - My character preferences are unclear
+    - I haven't figured out my favorite type of character yet
+    - I'm undecided about the types of characters I enjoy
+    - My character preferences keep changing
+    - I'm still discovering what types of characters I like
+    - I'm not sure what traits I prefer in characters
+    - I'm exploring different character archetypes
+    - I haven't formed strong opinions about characters yet
+    - Character preferences are a bit fuzzy for me
+    - I'm still developing my taste in characters
+    - I haven't found my favorite type of character yet
 
 - intent: certain_characters
   examples: |
-    - I love stories with strong and heroic characters.
-    - Certain that I enjoy characters with complexity.
-    - I'm sure I like brave and relatable characters.
+    - I love stories with strong and heroic characters
+    - Certain that I enjoy characters with complexity
+    - I'm sure I like brave and relatable characters
+    - I'm drawn to characters with a sense of humor
+    - I enjoy reading about morally gray characters
+    - I'm a fan of characters with tragic backstories
+    - I prefer characters with depth and complexity
+    - I'm into characters who go on personal journeys
+    - I like reading about characters who overcome adversity
+    - I enjoy protagonists with strong moral compasses
+    - I'm interested in characters with unique quirks
+    - I'm drawn to characters with interesting flaws
+    - I prefer characters with relatable struggles
+    - I'm fascinated by anti-hero characters
+    - I enjoy reading about characters with strong convictions
 
 - intent: preference_relatable_characters
   examples: |
-    - I prefer stories with characters I can relate to.
-    - Relatable characters make a story more enjoyable for me.
-    - I like characters who face challenges similar to real life.
+    - I prefer stories with characters I can relate to
+    - Relatable characters make a story more enjoyable for me
+    - I like characters who face challenges similar to real life
+    - I enjoy reading about characters who struggle with everyday issues
+    - I'm drawn to characters with experiences similar to mine
+    - Characters who reflect real-life struggles resonate with me
+    - I prefer characters who deal with relatable emotions
+    - Reading about characters I can empathize with enhances my experience
+    - I'm interested in characters whose experiences mirror mine
+    - I enjoy reading about characters I can connect with emotionally
+    - Relatable characters help me engage with the story
+    - I prefer characters who face familiar dilemmas
+    - Characters with realistic personalities appeal to me
+    - I'm interested in characters who navigate everyday challenges
+    - I enjoy stories with characters whose experiences I understand
 
 - intent: no_preference_relatable_characters
   examples: |
-    - I don't have a specific preference for relatable characters.
-    - Not particular about characters being relatable.
-    - No strong preference for relatability in characters.
+    - I don't have a specific preference for relatable characters
+    - Not particular about characters being relatable
+    - No strong preference for relatability in characters
+    - I'm open to characters with diverse backgrounds
+    - Relatability of characters is not a deciding factor for me
+    - I'm more focused on the plot than the relatability of characters
+    - Relatable characters are nice, but not essential for me
+    - I'm flexible when it comes to character relatability
+    - Whether characters are relatable or not doesn't matter to me
+    - I'm indifferent to the relatability of characters
+    - Relatable characters are a bonus, but not necessary for me
+    - I'm open to exploring characters from different walks of life
+    - Whether I can relate to characters or not doesn't affect my enjoyment
+    - I'm more interested in character development than relatability
+    - Relatability of characters is not a major consideration for me
 
 - intent: inquire_relatable_characters
   examples: |
     - Can you recommend books with relatable characters?
-    - I'm interested in stories with characters facing relatable challenges.
+    - I'm interested in stories with characters facing relatable challenges
     - Any suggestions for books with relatable characters?
-
+    - Could you recommend books with characters I can relate to?
+    - I'm looking for stories featuring characters I can empathize with
+    - Do you have any book recommendations with relatable protagonists?
+    - I'm seeking out stories that feature characters with experiences similar to mine
+    - Any book suggestions featuring characters dealing with everyday struggles?
+    - Could you point me towards books with characters whose journeys resonate with readers?
+    - I'm on the lookout for novels with characters whose emotions I can connect with
 - intent: no_inquire_relatable_characters
   examples: |
-    - I'm not looking for books with specific character recommendations.
-    - No need for suggestions based on character relatability.
-    - I'll explore characters on my own; no recommendations needed.
+    - I'm not looking for books with specific character recommendations
+    - No need for suggestions based on character relatability
+    - I'll explore characters on my own; no recommendations needed
+    - Character relatability is not a priority for me right now
+    - I prefer to discover characters on my own
+    - I'm more interested in exploring different genres than specific character types
+    - I'll decide on books based on their plots rather than character relatability
+    - No specific requirements for characters in the books I'm seeking
+    - I'll choose my reading material based on a variety of factors, not just character relatability
+    - Character preferences are not a major consideration for me at the moment
+    - I'm open to exploring a wide range of characters in the books I read
+    - I'll form my own opinions about characters as I read
+    - I prefer to experience characters within the context of the story rather than seek out specific types
+    - I'll let the story surprise me with its characters rather than seek out relatable ones
+    - I'm more interested in discovering new authors than focusing on character relatability
 
 - intent: interest_sports_outdoors
   examples: |
-    - I'm interested in books with sports or outdoor activities.
+    - I'm interested in books with sports or outdoor activities
     - Any good novels involving outdoor adventures?
-    - Sports in books really catch my attention.
+    - Sports in books really catch my attention
+    - Adventure stories set in the great outdoors are my cup of tea
+    - I enjoy reading about athletes and their journeys
+    - Books about outdoor expeditions intrigue me
+    - I'm drawn to stories that feature outdoor survival
+    - Sports-themed novels are my go-to reads
+    - Tales of adventure in the wilderness captivate me
+    - I'm a fan of books that showcase outdoor pursuits
 
 - intent: no_interest_sports_outdoors
   examples: |
-    - I'm not into sports or outdoor-themed stories.
-    - No preference for books related to outdoor activities.
-    - Sports and outdoors don't appeal to me in books.
-
-
-
+    - I'm not into sports or outdoor-themed stories
+    - No preference for books related to outdoor activities
+    - Sports and outdoors don't appeal to me in books
+    - Adventure stories are not my thing
+    - I prefer books set in urban environments
+    - Outdoor adventures don't interest me much
+    - I'd rather read about something other than sports or outdoor activities
+    - I'm more interested in other genres besides sports and outdoor themes
+    - Books about nature and outdoor exploration aren't my cup of tea
+    - I'm not drawn to books with sports-related plots
+    - I prefer stories with indoor settings over outdoor adventures
 - intent: preference_action_emotion
   examples: |
-    - I enjoy books with a good balance of action and emotion.
-    - Stories with both action and emotional moments are my preference.
-    - I like books that provide a mix of action and heartfelt scenes.
-
+    - I enjoy books with a good balance of action and emotion
+    - Stories with both action and emotional moments are my preference
+    - I like books that provide a mix of action and heartfelt scenes
+    - Action-packed novels with emotional depth appeal to me
+    - Books that keep me on the edge of my seat while touching my heart are my favorite
+    - I'm drawn to stories that evoke a range of emotions, from excitement to tears
+    - I prefer books that combine thrilling action with deep emotional resonance
+    - A well-balanced mix of action and emotion keeps me engaged in a story
+    - I enjoy reading novels that take me on an emotional rollercoaster ride
+    - Action scenes intertwined with moments of intense emotion make for compelling storytelling
 - intent: no_preference_action_emotion
   examples: |
-    - I don't have a specific preference for the balance of action and emotion.
-    - Not particular about the mix of action and emotion in books.
-    - No strong preference for or against action or emotional content.
+    - I don't have a specific preference for the balance of action and emotion
+    - Not particular about the mix of action and emotion in books
+    - No strong preference for or against action or emotional content
+    - I'm open to books with varying degrees of action and emotion
+    - Whether a book has a lot of action or emotion doesn't matter to me
+    - I'm more interested in the overall story than the balance of action and emotion
+    - Action and emotion are both important elements of a good story, but neither is a priority for me
+    - I enjoy books that excel in either action or emotion, but it's not a requirement for me
+    - I'm flexible when it comes to the ratio of action to emotion in books
+    - The balance of action and emotion in a book is not a make-or-break factor for me
 
 - intent: uncertain_book_length
   examples: |
-    - I'm not sure if I prefer shorter or longer books.
-    - Uncertain about the ideal length of books for me.
-    - It's hard to say if I have a preference for book length.
-
+    - I'm not sure if I prefer shorter or longer books
+    - Uncertain about the ideal length of books for me
+    - It's hard to say if I have a preference for book length
+    - I'm undecided about whether I enjoy shorter or longer reads
+    - My preferred book length varies depending on the genre
+    - I'm still exploring different book lengths to find what suits me best
+    - I haven't determined my optimal book length yet
+    - The length of a book isn't a deciding factor for me
+    - I'm open to reading books of any length
+    - I'm still experimenting with different book lengths to see what I like
+    - My reading preferences don't lean towards shorter or longer books specifically
+    - I'm unsure about whether I prefer quick reads or immersive novels
+    - The length of a book doesn't impact my enjoyment as much as other factors
+    - I'm still figuring out my comfort zone when it comes to book length
+    - I'm open to trying out books of various lengths to see what resonates with me
 - intent: certain_book_length
   examples: |
-    - I enjoy both shorter quick reads and longer, immersive novels.
-    - I'm certain that I prefer longer books with in-depth storytelling.
-    - Short or long, as long as the story is captivating, I'm in.
+    - I enjoy both shorter quick reads and longer, immersive novels
+    - I'm certain that I prefer longer books with in-depth storytelling
+    - Short or long, as long as the story is captivating, I'm in
+    - I'm a fan of both novellas and epic sagas
+    - I prefer books that allow me to fully immerse myself in the story
+    - The length of a book doesn't matter to me as long as it holds my interest
+    - I'm drawn to books with richly developed worlds, regardless of length
+    - I enjoy the journey of a lengthy novel as much as the brevity of a short story
+    - Whether a book is short or long, it's the quality of the storytelling that matters most to me
+    - I appreciate the depth and complexity that longer books offer
+    - Shorter books are perfect for quick escapes, while longer books provide a deeper dive into the narrative
+    - The length of a book is secondary to the impact of its storytelling for me
+    - I'm comfortable committing to longer reads if they promise a rewarding experience
+    - I'm open to exploring books of varying lengths to discover new perspectives and storytelling styles
 
 - intent: inquire_recommendations
   examples: |
     - Can you recommend any good books for me to read?
-    - Looking for book recommendations based on my preferences.
+    - Looking for book recommendations based on my preferences
     - Any suggestions for books similar to my interests?
-
+    - What are some must-read books in [genre]?
+    - I'm seeking recommendations for books with [specific theme or element]
+    - Could you suggest some books that align with my tastes?
+    - I'm eager to discover new authors and genres; any recommendations?
+    - Do you have any hidden gem book recommendations?
+    - I'm open to exploring different genres; what do you recommend?
+    - Any lesser-known books that you think I'd enjoy?
 - intent: no_inquire_recommendations
   examples: |
-    - I'm not actively seeking book recommendations right now.
-    - No need for book suggestions at the moment.
-    - I'll explore books on my own; no recommendations needed.
-
+    - I'm not actively seeking book recommendations right now
+    - No need for book suggestions at the moment
+    - I'll explore books on my own; no recommendations needed
+    - I'm currently focused on my TBR list; no new recommendations for now
+    - Thanks, but I'm content with my current reading lineup
+    - I'll browse for books at my own pace; no rush for recommendations
+    - I prefer to discover books organically rather than through recommendations
+    - My reading list is already overflowing; no room for new recommendations
+    - I'll decide on my next read when the time comes; no recommendations necessary
+    - I'm taking a break from book recommendations for now
+    - No need to add more books to my reading list; it's already too long
+    - I'm enjoying the process of exploring books independently; no recommendations needed
+    - I'll seek out recommendations when I'm in the mood for something new; not right now
+    - I've got enough books on my radar for now; no need for additional recommendations
 - intent: share_entertainment_preferences
   examples: |
-    - I enjoy adventure movies and sports video games.
-    - My entertainment preferences include action-packed movies and sports games.
-    - Here are some of my favorite genres in movies and games.
+    - I enjoy adventure movies and sports video games
+    - My entertainment preferences include action-packed movies and sports games
+    - Here are some of my favorite genres in movies and games
+    - I'm a fan of fantasy novels and sci-fi TV shows
+    - My go-to entertainment choices are mystery novels and crime documentaries
+    - I like to unwind with comedy movies and casual mobile games
+    - Science fiction books and superhero movies are my top picks
+    - I'm into historical dramas and strategy video games
+    - Horror novels and thriller films are my guilty pleasures
+    - I prefer classic literature and indie films over mainstream entertainment
+    - I enjoy a mix of high fantasy novels and reality TV shows
+    - Action-packed blockbusters and open-world RPGs are my preferred forms of entertainment
+    - I'm a fan of animated movies and fantasy-themed video games
+    - Romantic comedies and cozy mysteries are my comfort entertainment choices
+    - I'm drawn to dystopian fiction books and survival horror games
 
 - intent: no_share_entertainment_preferences
   examples: |
-    - I prefer not to share specific details about my entertainment preferences.
-    - Not comfortable disclosing my favorite genres at the moment.
-    - Let's keep the focus on books; I won't share my entertainment preferences.
-
+    - I prefer not to share specific details about my entertainment preferences
+    - Not comfortable disclosing my favorite genres at the moment
+    - Let's keep the focus on books; I won't share my entertainment preferences
+    - My entertainment choices are personal; I'd rather not discuss them
+    - I'd rather not delve into my entertainment preferences right now
+    - Let's stick to discussing books; my other entertainment preferences are irrelevant
+    - I prefer to keep my entertainment preferences private
+    - My entertainment tastes are constantly evolving; no need to discuss them
+    - I'd rather not pigeonhole myself by discussing my entertainment preferences
+    - I'm here to talk about books, not my other entertainment preferences
+    - Let's keep the conversation focused on literature; my other entertainment choices aren't relevant
+    - My entertainment preferences are eclectic and ever-changing; no need to dwell on them
+    - I prefer to keep my entertainment preferences to myself; they're subject to change
+    - I'll share my entertainment preferences on my own terms; not during this conversation
+    - Let's steer clear of discussing my entertainment preferences; they're not pertinent to our conversation
 - intent: accept_recommendation
   examples: |
-    - That sounds like a great recommendation! I'll check it out.
-    - I accept the recommendation; it aligns with my preferences.
+    - That sounds like a great recommendation! I'll check it out
+    - I accept the recommendation; it aligns with my preferences
     - Yes, I'd love to explore the suggested book. Thank you!
-
+    - I'll add the recommended book to my reading list; thanks for the suggestion
+    - Thanks for the recommendation! I'll make sure to give it a read
+    - I appreciate the recommendation; I'll definitely give the book a try
+    - Consider the recommended book added to my TBR pile; thanks!
+    - I'm excited to dive into the recommended book; thanks for sharing!
+    - I'll trust your judgment and give the recommended book a shot
+    - The recommended book sounds intriguing; I'm eager to get started
 - intent: reject_recommendation
   examples: |
-    - The recommendation doesn't quite match my interests.
-    - I appreciate the suggestion, but I'm not interested in that book.
-    - I'll pass on this recommendation; it's not what I'm looking for.
+    - The recommendation doesn't quite match my interests
+    - I appreciate the suggestion, but I'm not interested in that book
+    - I'll pass on this recommendation; it's not what I'm looking for
+    - Thanks, but I don't think the recommended book is for me
+    - I'll have to decline the recommendation; it doesn't appeal to me
+    - The recommended book doesn't seem like my cup of tea
+    - I'll respectfully decline the recommendation; it's not what I'm currently seeking
+    - I'll explore other options; the recommended book doesn't pique my interest
+    - I'm looking for something different; thanks anyway for the recommendation
+    - I'll have to skip the recommended book; it doesn't align with my preferences
+    - The recommended book isn't what I had in mind; I'll keep searching
+    - I'll pass on the recommended book for now; it's not what I'm craving
+    - Thanks, but I'll have to decline the recommendation this time
+    - I'm seeking something specific; the recommended book doesn't fit the bill
+    - I'll have to respectfully decline the recommendation; it's not what I'm currently in the mood for
 
 - intent: continue_conversation
   examples: |
@@ -201,6 +445,11 @@ nlu:
     - Continue the conversation
     - I'm not done chatting yet
     - Any other topics to explore?
+    - Let's dive deeper into the conversation
+    - I'm enjoying our discussion; let's continue
+    - There's still more I'd like to chat about
+    - Don't stop now; there's more to talk about
+
 # Additional Intents:
 - intent: ask_for_more_info
   examples: |
@@ -208,6 +457,13 @@ nlu:
     - I'd like more information about the genres available.
     - What other preferences should I consider?
     - Can you provide details about the characters in the recommended books?
+    - Could you give me additional details about the authors of the recommended books?
+    - I'm interested in learning more about the plotlines of the suggested books.
+    - Are there any particular themes or motifs prevalent in the recommended books?
+    - Can you elaborate on the writing styles of the recommended authors?
+    - I'd appreciate more insights into the settings depicted in the suggested books.
+    - Is there a particular audience or demographic targeted by the recommended books?
+    - Could you provide background information on the publishing history of the recommended books?
 
 - intent: thank_you
   examples: |
@@ -216,6 +472,12 @@ nlu:
     - I appreciate your assistance.
     - Thanks a lot!
     - Grateful for your suggestions.
+    - Many thanks for pointing me in the right direction.
+    - I'm thankful for the insightful recommendations.
+    - I'm grateful for the guidance you've provided.
+    - Thank you kindly for your thoughtful suggestions.
+    - Your recommendations are much appreciated.
+    - I'm indebted to you for your valuable input.
 
 - intent: explore_more_options
   examples: |
@@ -223,6 +485,15 @@ nlu:
     - Can you suggest more books in different categories?
     - I want to explore a broader range of options.
     - Any other recommendations for someone new to reading?
+    - Could you provide additional suggestions beyond what we've discussed?
+    - I'm eager to discover more titles; do you have any other favorites?
+    - Are there any lesser-known gems you can recommend?
+    - Can you expand my reading list with more diverse options?
+    - I'm open to exploring different themes and genres; what else do you have?
+    - Are there any specific subgenres or niche categories you'd recommend exploring?
+    - Can you introduce me to some up-and-coming authors or emerging voices?
+    - I'm looking for unique and unconventional reads; do you have any recommendations?
+
 
 
 

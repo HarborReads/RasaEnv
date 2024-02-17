@@ -33,6 +33,13 @@ pipeline: null
 #     threshold: 0.3
 #     ambiguity_threshold: 0.1
 
+language: en
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: CountVectorsFeaturizer
+  - name: DIETClassifier
+    epochs: 100
+
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies: null

@@ -27,6 +27,35 @@ stories:
       - action: action_ask_for_more_information
       - intent: end_conversation
       - action: action_end_the_conversation
+      
+  - story: accept_recommendation_path
+    steps:
+      - intent: greet
+      - action: action_start_conversation
+      - intent: certain_preferences
+      - action: action_explore_reading_preferences
+      - intent: preference_settings
+      - action: real_world_vs_fantastical
+      - intent: certain_characters
+      - action: character_preference
+      - intent: preference_relatable_characters
+      - action: relatable_characters_explanation
+      - intent: inquire_relatable_characters
+      - action: specific_topics_interest
+      - intent: interest_sports_outdoors
+      - action: sports_and_outdoors_interest
+      - intent: preference_action_emotion
+      - action: action_vs_emotion_preference
+      - intent: certain_book_length
+      - action: book_length_preference
+      - intent: inquire_recommendations
+      - action: ask_for_more_info
+      - intent: share_entertainment_preferences
+      - action: accept_recommendation
+      - intent: continue_conversation
+      - action: action_ask_for_more_information
+      - intent: end_conversation
+      - action: action_end_the_conversation
 
 
 
